@@ -35,7 +35,7 @@ import sys
 from pathlib import Path
 from typing import Never
 
-__version__ = "0.1.0"
+__version__ = "0.1.2"
 
 # Not a .md name, so the user's own Entangled (watch_list "**/*.md") never picks the copy up.
 SOURCE_NAME = "source.mdfsrun"

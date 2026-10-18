@@ -1,6 +1,6 @@
 [project]
 name = "mdfsrun"
-version = "0.1.1"
+version = "0.1.2"
 description = "Run a front-matter Markdown file: tangle its code blocks with Entangled and run its front matter as a Taskfile"
 readme = "README.md"
 requires-python = ">=3.13"  # required by entangled-cli 2.4.x
