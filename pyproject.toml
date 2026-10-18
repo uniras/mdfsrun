@@ -1,6 +1,6 @@
 [project]
 name = "mdfsrun"
-version = "0.1.2"
+version = "0.1.3"
 description = "Run a front-matter Markdown file: tangle its code blocks with Entangled and run its front matter as a Taskfile"
 readme = "README.md"
 requires-python = ">=3.13"  # required by entangled-cli 2.4.x
@@ -23,6 +23,13 @@ dependencies = [
     "go-task-bin",
     "entangled-cli",
 ]
+
+[project.scripts]
+mdfsrun = "mdfsrun:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [project.urls]
 Homepage = "https://github.com/uniras/mdfsrun"
