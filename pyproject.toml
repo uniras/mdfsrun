@@ -1,0 +1,35 @@
+[project]
+name = "mdfsrun"
+version = "0.1.0"
+description = "Run a front-matter Markdown file: tangle its code blocks with Entangled and run its front matter as a Taskfile"
+readme = "README.md"
+requires-python = ">=3.13"  # required by entangled-cli 2.4.x
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["markdown", "literate-programming", "entangled", "taskfile", "pep723", "uv"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Build Tools",
+]
+dependencies = [
+    "go-task-bin",
+    "entangled-cli",
+]
+
+[project.scripts]
+mdfsrun = "mdfsrun:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+include = ["mdfsrun.py"]
+
+[tool.hatch.build.targets.sdist]
+include = ["mdfsrun.py", "README.md", "LICENSE", "example/"]
